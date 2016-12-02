@@ -44,7 +44,7 @@ FtlImpl_Dftl::FtlImpl_Dftl(Controller &controller):
 	FtlImpl_DftlParent(controller)
 {
 	uint ssdSize = NUMBER_OF_ADDRESSABLE_BLOCKS * BLOCK_SIZE;
-	printf("Total size to map: %uKB\n", ssdSize * PAGE_SIZE / 1024);
+	printf("Total size to map: %uKB\n", PAGE_SIZE / 1024 * ssdSize);
 	printf("Using DFTL.\n");
 	return;
 }
